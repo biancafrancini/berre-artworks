@@ -2,26 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.main-container {
+  height: 125vh;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.gallery-container {
+  height: 175vh;
+  overflow: hidden;
+  background: rgb(18, 46, 62);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.gallery {
+  position: relative;
+  top: -10.5vh;
+  height: 240vh;
+  display: flex;
+}
+
+.column {
+  width: 25%;
+  min-width: 250px;
+  white-space: nowrap;
+}
+
+.column:nth-of-type(1) {
+  top: -38%;
+}
+
+.column:nth-of-type(2) {
+  top: -20%;
+}
+
+.column:nth-of-type(3) {
+  top: -32%;
+}
+
+.column:nth-of-type(4) {
+  top: -60%;
+}
+
+/* .column:nth-of-type(5) {
+  top: -80%;
+} */
+
+.img-container {
+  height: 20%;
+}
+
+.space{
+  height: 60vh;
+}
+
+.title{
+  text-align: center;
+  color: rgb(19, 71, 101);
+}
+
+.subcategory-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
