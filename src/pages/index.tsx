@@ -3,6 +3,7 @@ import Image from "next/image";
 import { MotionValue, useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Lenis from "@studio-freight/lenis";
+import { Navbar } from "@/components/Navbar";
 
 const images: string[] = [
   "red_horse_swing-1.jpeg",
@@ -91,8 +92,9 @@ export default function Home() {
 
   return (
     <main className="main-container">
+      <Navbar />
       <div className="space flex flex-col justify-center items-center">
-        <h1 className="title text-8xl font-bold py-6">Sergio Berrettini</h1>
+        <h1 className="title text-8xl font-bold py-4">Sergio Berrettini</h1>
         <h2 className="title text-3xl italic pt-24 leading-relaxed">
           "Portami su <br />
           distante da questa vieta e bassa solleticazione <br /> così da
@@ -121,32 +123,43 @@ export default function Home() {
         <h3 className="title text-6xl font-bold pt-52 pb-12">Mi presento</h3>
         <p className="text-2xl w-1/2 leading-relaxed text-center">
           Questa è la mia tana <br />
-          E non ci porto soltanto quello che m'è stato vanto Corse balzi salti
-          voli grame notti e rari soli terra che scricchiola piede che scivola
-          confusi all'acre odore di saliva e di sudore Cuori vivi gioiosi
-          grigio-neri gravosi pennelli chitarre fate gnomi farfalle stregate
-          Amore che lacrima o gode irridente dolore che rumina e opprime
-          invadente Penne anelli orologi attestati necrologi vivacissimi occhi
-          verdi in cui viaggi oppur ti perdi chiodi viti legno zolle vanghe semi
-          vuoto folle poi batuffoli di lana. <br />
+          E non ci porto soltanto quello che m'è stato vanto <br />
+          Corse balzi salti voli grame notti e rari soli <br />
+          terra che scricchiola piede che scivola <br />
+          confusi all'acre odore di saliva e di sudore <br />
+          Cuori vivi gioiosi grigio-neri gravosi pennelli chitarre fate
+          <br />
+          gnomi farfalle stregate <br />
+          Amore che lacrima o gode irridente <br />
+          dolore che rumina e opprime invadente <br />
+          Penne anelli orologi attestati necrologi <br />
+          vivacissimi occhi verdi in cui viaggi oppur ti perdi <br />
+          chiodi viti legno zolle vanghe semi vuoto folle <br />
+          poi batuffoli di lana. <br />
           Questa si è la mia tana
         </p>
+        <button className="btn-nav text-xl text-blue-900 p-4 mt-12 font-bold shadow-md rounded-full hover:bg-blue-50">
+          Leggi la mia biografia →{" "}
+        </button>
       </div>
 
       <div className="subcategory-container">
         <h3 className="title text-6xl font-bold pt-40 pb-12">I miei lavori</h3>
-        <p className="text-2xl italic w-1/2 leading-relaxed text-center">
-         CAROUSEL IMAGES
-        </p>
+        <div className="flex artwork-container justify-between items-center w-1/3 h-96">
+          <p className="text-2xl italic leading-relaxed text-center py-64 px-24 border-4 border-blue-900 rounded-3xl">
+            IMAGE
+          </p>
+          <p className="text-2xl italic leading-relaxed text-center py-64 px-24 border-4 border-blue-900 rounded-3xl">
+            IMAGE
+          </p>
+          <p className="text-2xl italic leading-relaxed text-center py-64 px-24 border-4 border-blue-900 rounded-3xl">
+            IMAGE
+          </p>
+        </div>
+        <button className="btn-nav text-xl text-green-900 p-4 mt-12 font-bold shadow-md rounded-full hover:bg-green-50">
+          Tutti i miei lavori →{" "}
+        </button>
       </div>
-
-      <div className="subcategory-container">
-        <h3 className="title text-6xl font-bold pt-40 pb-12">Parlano di me</h3>
-        <p className="text-2xl italic w-1/2 leading-relaxed text-center">
-         CAROUSEL CITATIONS
-        </p>
-      </div>
-
       <div className="space"></div>
     </main>
   );
