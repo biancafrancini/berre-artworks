@@ -138,27 +138,6 @@ export default function Home() {
           poi batuffoli di lana. <br />
           Questa si è la mia tana
         </p>
-        <button className="btn-nav text-xl text-blue-900 p-4 mt-12 font-bold shadow-md rounded-full hover:bg-blue-50">
-          Leggi la mia biografia →{" "}
-        </button>
-      </div>
-
-      <div className="subcategory-container">
-        <h3 className="title text-6xl font-bold pt-40 pb-12">I miei lavori</h3>
-        <div className="flex artwork-container justify-between items-center w-1/3 h-96">
-          <p className="text-2xl italic leading-relaxed text-center py-64 px-24 border-4 border-blue-900 rounded-3xl">
-            IMAGE
-          </p>
-          <p className="text-2xl italic leading-relaxed text-center py-64 px-24 border-4 border-blue-900 rounded-3xl">
-            IMAGE
-          </p>
-          <p className="text-2xl italic leading-relaxed text-center py-64 px-24 border-4 border-blue-900 rounded-3xl">
-            IMAGE
-          </p>
-        </div>
-        <button className="btn-nav text-xl text-green-900 p-4 mt-12 font-bold shadow-md rounded-full hover:bg-green-50">
-          Tutti i miei lavori →{" "}
-        </button>
       </div>
       <div className="space"></div>
     </main>

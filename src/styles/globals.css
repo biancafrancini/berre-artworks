@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  --sergio: rgb(19, 71, 101);
+}
 .main-container {
   max-height: 125vh;
 }
@@ -9,7 +12,7 @@
 .gallery-container {
   height: 175vh;
   overflow: hidden;
-  background: rgb(18, 46, 62);
+  background: var(--sergio);
 }
 
 .gallery {
@@ -55,7 +58,11 @@
 
 .title{
   text-align: center;
-  color: rgb(19, 71, 101);
+  color: var(--sergio);
+}
+
+.btn-sergio{
+  color: var(--sergio);
 }
 
 .subcategory-container{
@@ -67,6 +74,6 @@
 
 .artwork-container{
   height: 30vh;
-  color: rgb(19, 71, 101);
+  color: var(--sergio);
   font-weight: bold;
 }
