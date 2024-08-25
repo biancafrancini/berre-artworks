@@ -4,7 +4,9 @@
 
 :root{
   --sergio: rgb(19, 71, 101);
+  --artworks:rgb(21, 128, 61);
 }
+
 .main-container {
   max-height: 125vh;
 }
@@ -13,6 +15,7 @@
   height: 175vh;
   overflow: hidden;
   background: var(--sergio);
+  margin-top: 20px;
 }
 
 .gallery {
@@ -72,8 +75,21 @@
   justify-content: center;
 }
 
-.artwork-container{
-  height: 30vh;
-  color: var(--sergio);
-  font-weight: bold;
+.page-artworks-container{
+  color: var(--artworks);
+}
+
+.card-image{
+  height: 500px;
+  width: 500px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .cards-container{
+    max-width: 400px;
+    padding: 0 20px;
+  }
+  
 }

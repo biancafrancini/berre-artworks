@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 import { Navbar } from "@/components/Navbar";
 
-const images: string[] = [
+export const images: string[] = [
   "red_horse_swing-1.jpeg",
   "cross_murales.jpeg",
   "viandante.jpeg",
@@ -13,7 +13,6 @@ const images: string[] = [
   "exlibris.jpeg",
   "portami_su.jpeg",
   "kids_copy.jpeg",
-
   "whole_wall_better.jpeg",
   "pinocchio_piece.jpeg",
   "mustache_man.jpeg",
@@ -95,7 +94,7 @@ export default function Home() {
       <Navbar />
       <div className="space flex flex-col justify-center items-center">
         <h1 className="title text-8xl font-bold py-4">Sergio Berrettini</h1>
-        <h2 className="title text-3xl italic pt-24 leading-relaxed">
+        <h2 className="title text-3xl italic pt-24 mb-24">
           "Portami su <br />
           distante da questa vieta e bassa solleticazione <br /> così da
           assaporare il tutto <br /> come ampia vista da un balcone"
