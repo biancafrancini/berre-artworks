@@ -4,6 +4,7 @@ import { Modal } from "./Modal";
 
 type CardsProps = {
   images: string[];
+  //background: boolean;
 };
 
 export const Cards: React.FC<CardsProps> = ({ images }) => {
@@ -11,14 +12,17 @@ export const Cards: React.FC<CardsProps> = ({ images }) => {
   const [pic, setPic] = useState({
     picture: "",
   });
+ 
+  //const [bgStatus, setBgStatus] = background ? useState(false) : useState(true);
 
   const handleClose = () => {
     setOpen(false);
+    //setBgStatus(!background);
   };
 
   return (
     <div>
-      <div className="cards-container flex w-76 flex-wrap gap-2 mx-24 justify-center ">
+      <div className="cards-container flex w-76 flex-wrap gap-2 mx-24 justify-center">
         {images?.map((image: string, index: number) => (
           <div className="card flex" key={index + image[index]}>
             <motion.button
@@ -27,6 +31,7 @@ export const Cards: React.FC<CardsProps> = ({ images }) => {
               onClick={() => {
                 setPic({ picture: image });
                 setOpen(true);
+                //setBgStatus(!background);
               }}
             >
               <div className="card-image flex">
@@ -37,7 +42,9 @@ export const Cards: React.FC<CardsProps> = ({ images }) => {
         ))}{" "}
       </div>
       {open && (
+         <div className="overlay" onClick={handleClose}>
         <Modal piece={pic.picture} open={open} onClose={handleClose} />
+      </div>
       )}
     </div>
   );
