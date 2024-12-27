@@ -47,10 +47,6 @@
   top: -60%;
 }
 
-/* .column:nth-of-type(5) {
-  top: -80%;
-} */
-
 .img-container {
   height: 20%;
 }
@@ -75,7 +71,9 @@
   justify-content: center;
 }
 
-.page-artworks-container{
+.page-artworks-container > div > h1, 
+.artwork-details > .title,
+.cross-close-button {
   color: var(--artworks);
 }
 

@@ -1,29 +1,45 @@
 import { motion } from "framer-motion";
+import { Image } from "./Cards";
 
 type ModalProps = {
-  piece: string;
+  piece: Image;
   open: boolean;
   onClose: () => void;
 };
 export const Modal: React.FC<ModalProps> = ({ piece, open, onClose }) => {
   return (
-    <div>
+    <div className="modal-container">
       <motion.div
-        className="flex absolute top-96 left-1/4 -ml-124 w-1/2 bg-white rounded-lg px-8 pt-4 pb-8"
+        className="modal-morion-div-container flex absolute top-96 left-1/4 -ml-124 w-1/2 bg-white rounded-lg px-8 pt-4 pb-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
         <div className="flex-row gap-12 px-2 h-full w-full">
-          <button className="font-bold text-green-700 place-self-end pb-4" onClick={onClose}>
+          <button
+            className="cross-close-button font-bold place-self-end pb-4"
+            onClick={onClose}
+          >
             X
           </button>
-          <div className="flex w-1/2 gap-4 h-full">
+          <div className="flex gap-4 h-full">
             <img
-              className="rounded-xl items-center"
-              src={`../images/${piece}`}
+              className="rounded-xl items-center w-1/2"
+              src={`../images/${piece.image}`}
             />
-            <div className="flex">
-              <h2>Title</h2>
+            <div className="flex flex-col space-between gap-12">
+              <div className="artwork-details flex flex-col items-start">
+                <p className="title font-bold text-xl pb-4">{piece.title}</p>
+                <p className="text-md">{piece.description}</p>
+              </div>
+              <div className="artwork-details flex flex-col items-start text-sm">
+                {piece.year && piece.exhibitions && (
+                  <p>
+                    {piece.year}, {piece.exhibitions}
+                  </p>
+                )}
+                {piece.dims && <p>{piece.dims} cm</p>}
+                {piece.technique && <p>{piece.technique}</p>}
+              </div>
             </div>
           </div>
         </div>
