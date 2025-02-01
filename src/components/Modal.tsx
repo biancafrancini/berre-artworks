@@ -16,7 +16,7 @@ export const Modal: React.FC<ModalProps> = ({ piece, open, onClose }) => {
       >
         <div className="flex-row gap-12 px-2 h-full w-full">
           <button
-            className="cross-close-button font-bold place-self-end pb-4"
+            className="cross-close-button border-2 rounded-full w-8 h-8 shadow-md font-bold place-self-end mb-4"
             onClick={onClose}
           >
             X

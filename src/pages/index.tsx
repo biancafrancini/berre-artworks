@@ -92,9 +92,9 @@ export default function Home() {
   return (
     <main className="main-container">
       <Navbar />
-      <div className="space flex flex-col justify-center items-center">
-        <h1 className="title text-8xl font-bold py-4">Sergio Berrettini</h1>
-        <h2 className="title text-3xl italic pt-24 mb-24">
+      <div className="space flex flex-col justify-center items-center mt-24 mb-22">
+        <h1 className="title-home text-8xl font-bold">Sergio Berrettini</h1>
+        <h2 className="title-home text-3xl italic my-20">
           "Portami su <br />
           distante da questa vieta e bassa solleticazione <br /> così da
           assaporare il tutto <br /> come ampia vista da un balcone"
@@ -118,9 +118,10 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="subcategory-container">
-        <h3 className="title text-6xl font-bold pt-52 pb-12">Mi presento</h3>
-        <p className="text-2xl w-1/2 leading-relaxed text-center">
+      <div className="subcategory-container mx-32 flex flex-row my-48">
+        <div className="flex flex-col items-start w-1/2">
+        <h3 className="mi-presento-home text-6xl font-bold pb-8">Mi presento</h3>
+        <p className="mi-presento-home text-2xl leading-relaxed text-left">
           Questa è la mia tana <br />
           E non ci porto soltanto quello che m'è stato vanto <br />
           Corse balzi salti voli grame notti e rari soli <br />
@@ -137,6 +138,10 @@ export default function Home() {
           poi batuffoli di lana. <br />
           Questa si è la mia tana
         </p>
+        </div>
+        <div className="sergio-picture flex flex-col items-end w-1/2">
+          <img src="../files/sergio-profile.jpg" width={650} alt="sergio-picture" />
+        </div>
       </div>
       <div className="space"></div>
     </main>

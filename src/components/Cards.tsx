@@ -35,7 +35,7 @@ export const Cards: React.FC<CardsProps> = ({ images }) => {
 
   return (
     <div>
-      <div className="cards-container flex w-76 flex-wrap gap-2 mx-24 justify-center">
+      <div className="cards-container flex w-74 flex-wrap gap-2 mx-24 justify-center">
         {images?.map((image: Image, index: number) => (
           <div className="card flex" key={index}>
             <motion.button
@@ -55,9 +55,9 @@ export const Cards: React.FC<CardsProps> = ({ images }) => {
                 setOpen(true);
               }}
             >
-              <div className="card-image flex">
+              <div className="card-image flex justify-center">
                   <img
-                    className="rounded-xl"
+                    className="rounded-xl px-2"
                     src={`../images/${image.image}`}
                   />
               </div>

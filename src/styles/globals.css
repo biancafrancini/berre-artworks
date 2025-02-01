@@ -5,6 +5,24 @@
 :root{
   --sergio: rgb(19, 71, 101);
   --artworks:rgb(21, 128, 61);
+  --amber: rgb(224, 138, 46);
+}
+
+.navbar{
+  background-color: var(--sergio);
+  color: white;
+}
+
+.btn-sergio:hover {
+  color: var(--sergio);
+}
+
+.btn-opere:hover {
+  color: var(--artworks);
+}
+
+.btn-contatti:hover {
+  color: var(--amber);
 }
 
 .main-container {
@@ -55,26 +73,29 @@
   height: 50vh;
 }
 
-.title{
+.title-home{
   text-align: center;
   color: var(--sergio);
 }
 
-.btn-sergio{
+.mi-presento-home{
   color: var(--sergio);
 }
 
-.subcategory-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.sergio-picture > img{
+  border-radius: 35px 5px 35px 5px;
 }
 
-.page-artworks-container > div > h1, 
-.artwork-details > .title,
-.cross-close-button {
+.page-artworks-container > div > h1,
+.page-artworks-container > div > h2,  
+.artwork-details > .title{
   color: var(--artworks);
+}
+
+.cross-close-button {
+  border-color: var(--artworks);
+  color: white;
+  background-color: var(--artworks, 0.5, 0.5, 0.5);
 }
 
 .card-image{
