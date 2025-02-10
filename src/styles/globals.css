@@ -115,10 +115,30 @@
   align-items: center;
 }
 
+.footer{
+  background-color: var(--sergio);
+}
+
+.mail-icon, .fb-icon {
+  display: flex;
+  color: white;
+}
+
 @media screen and (max-width: 768px) {
   .cards-container{
-    max-width: 400px;
+    max-width: 100%;
     padding: 0 20px;
+  }
+
+  .subcategory-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .main-container, .page-artworks{
+    min-width: 100vh;
   }
   
 }

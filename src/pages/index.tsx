@@ -4,6 +4,7 @@ import { MotionValue, useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 export const images: string[] = [
   "red_horse_swing-1.jpeg",
@@ -53,6 +54,7 @@ const Column: React.FC<ColumnProps> = ({ images, y }) => {
 };
 
 export default function Home() {
+  const contactsRef = useRef<HTMLDivElement | null>(null);
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -91,10 +93,10 @@ export default function Home() {
 
   return (
     <main className="main-container">
-      <Navbar />
-      <div className="space flex flex-col justify-center items-center mt-24 mb-22">
-        <h1 className="title-home text-8xl font-bold">Sergio Berrettini</h1>
-        <h2 className="title-home text-3xl italic my-20">
+      <Navbar contacts={contactsRef} />
+      <div className="space flex flex-col justify-center items-center mt-44 mb-22">
+        <h1 className="title-home md:text-8xl text-4xl font-bold">Sergio Berrettini</h1>
+        <h2 className="title-home md:text-3xl text-lg italic md:m-20 m-10">
           "Portami su <br />
           distante da questa vieta e bassa solleticazione <br /> così da
           assaporare il tutto <br /> come ampia vista da un balcone"
@@ -118,32 +120,40 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="subcategory-container mx-32 flex flex-row my-48">
-        <div className="flex flex-col items-start w-1/2">
-        <h3 className="mi-presento-home text-6xl font-bold pb-8">Mi presento</h3>
-        <p className="mi-presento-home text-2xl leading-relaxed text-left">
-          Questa è la mia tana <br />
-          E non ci porto soltanto quello che m'è stato vanto <br />
-          Corse balzi salti voli grame notti e rari soli <br />
-          terra che scricchiola piede che scivola <br />
-          confusi all'acre odore di saliva e di sudore <br />
-          Cuori vivi gioiosi grigio-neri gravosi pennelli chitarre fate
-          <br />
-          gnomi farfalle stregate <br />
-          Amore che lacrima o gode irridente <br />
-          dolore che rumina e opprime invadente <br />
-          Penne anelli orologi attestati necrologi <br />
-          vivacissimi occhi verdi in cui viaggi oppur ti perdi <br />
-          chiodi viti legno zolle vanghe semi vuoto folle <br />
-          poi batuffoli di lana. <br />
-          Questa si è la mia tana
-        </p>
+      <div className="subcategory-container md:mx-32 mx-10 flex flex-row md:my-48 my-20">
+        <div className="flex flex-col items-start md:w-1/2 w-full">
+          <h3 className="mi-presento-home md:text-6xl text-2xl font-bold pb-8">
+            Mi presento
+          </h3>
+          <p className="mi-presento-home md:text-2xl text-md leading-relaxed text-left">
+            Questa è la mia tana <br />
+            E non ci porto soltanto quello che m'è stato vanto <br />
+            Corse balzi salti voli grame notti e rari soli <br />
+            terra che scricchiola piede che scivola <br />
+            confusi all'acre odore di saliva e di sudore <br />
+            Cuori vivi gioiosi grigio-neri gravosi pennelli chitarre fate
+            <br />
+            gnomi farfalle stregate <br />
+            Amore che lacrima o gode irridente <br />
+            dolore che rumina e opprime invadente <br />
+            Penne anelli orologi attestati necrologi <br />
+            vivacissimi occhi verdi in cui viaggi oppur ti perdi <br />
+            chiodi viti legno zolle vanghe semi vuoto folle <br />
+            poi batuffoli di lana. <br />
+            Questa si è la mia tana
+          </p>
         </div>
-        <div className="sergio-picture flex flex-col items-end w-1/2">
-          <img src="../files/sergio-profile.jpg" width={650} alt="sergio-picture" />
+        <div className="sergio-picture flex flex-col items-end md:w-1/2 w-full">
+          <img
+            src="../files/sergio-profile.jpg"
+            width={650}
+            alt="sergio-picture"
+          />
         </div>
       </div>
-      <div className="space"></div>
+      <div ref={contactsRef}>
+        <Footer />
+      </div>
     </main>
   );
 }

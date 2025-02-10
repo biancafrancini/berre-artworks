@@ -1,5 +1,7 @@
 import { Cards } from "@/components/Cards";
-import React, { useState } from "react";
+import { Footer } from "@/components/Footer";
+import { Navbar } from "@/components/Navbar";
+import React, { useState, useRef } from "react";
 
 /*const artworks: string[] = [
   "red_horse_swing-1.jpeg",
@@ -327,20 +329,28 @@ const artworks = [
 // ];
 
 export default function Artworks() {
+  const contactsRef = useRef<HTMLDivElement | null>(null);
   return (
-    <div className="page-artworks-container flex flex-col items-center h-full">
-      <div className="my-20 flex flex-col">
-        <h1 className="text-xl text-center font-bold md:text-3xl">
-          "It is only when we are no longer fearful that we begin to create..."
-        </h1>
-        <h2 className="italic md:text-md text-sm text-end pt-2">
-          - J. M. W. Turner
-        </h2>
-      </div>
-      <div className="artworks-container flex w-full m-10">
-        <div className="cards">
-          <Cards images={artworks} />
+    <div className="page-artworks">
+      <div className="page-artworks-container flex flex-col items-center h-full w-full">
+        <Navbar contacts={contactsRef} />
+        <div className="md:mt-60 mt-44 md:mb-20 mb-12 md:mx-0 mx-20 flex flex-col">
+          <h1 className="text-center font-bold md:text-3xl text-2xl">
+            "It is only when we are no longer fearful that we begin to
+            create..."
+          </h1>
+          <h2 className="italic md:text-md text-sm md:text-end text-center pt-2">
+          J. M. W. Turner
+          </h2>
         </div>
+        <div className="artworks-container flex w-full m-10">
+          <div className="cards">
+            <Cards images={artworks} />
+          </div>
+        </div>
+      </div>
+      <div ref={contactsRef}>
+        <Footer />
       </div>
     </div>
   );
