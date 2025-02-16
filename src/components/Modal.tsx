@@ -10,7 +10,7 @@ export const Modal: React.FC<ModalProps> = ({ piece, open, onClose }) => {
   return (
     <div className="modal-container">
       <motion.div
-        className="modal-morion-div-container flex absolute top-96 left-1/4 -ml-124 w-1/2 bg-white rounded-lg px-8 pt-4 pb-8"
+        className="modal-morion-div-container flex absolute md:top-48 top-36 left-1/4 -ml-124 w-1/2 bg-white rounded-lg px-8 pt-4 pb-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
@@ -21,9 +21,9 @@ export const Modal: React.FC<ModalProps> = ({ piece, open, onClose }) => {
           >
             X
           </button>
-          <div className="flex gap-4 h-full">
+          <div className="flex md:flex-row flex-col gap-4 h-full">
             <img
-              className="rounded-xl items-center w-1/2"
+              className="rounded-xl items-center md:w-1/2 w-full"
               src={`../images/${piece.image}`}
             />
             <div className="flex flex-col space-between gap-12">
