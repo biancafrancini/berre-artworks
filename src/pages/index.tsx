@@ -95,8 +95,8 @@ export default function Home() {
     <main className="main-container">
       <Navbar contacts={contactsRef} />
       <div className="space flex flex-col justify-center items-center mt-44 mb-22">
-        <h1 className="title-home md:text-8xl text-4xl font-bold">Sergio Berrettini</h1>
-        <h2 className="title-home md:text-3xl text-lg italic md:m-20 m-10">
+        <h1 className="title-home text-center md:text-8xl text-4xl font-bold">Sergio Berrettini</h1>
+        <h2 className="title-home text-center md:text-3xl text-lg italic md:m-20 m-10">
           "Portami su <br />
           distante da questa vieta e bassa solleticazione <br /> così da
           assaporare il tutto <br /> come ampia vista da un balcone"
@@ -120,12 +120,12 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="subcategory-container md:mx-32 mx-10 flex flex-row md:my-48 my-20">
-        <div className="flex flex-col items-start md:w-1/2 w-full">
-          <h3 className="mi-presento-home md:text-6xl text-2xl font-bold pb-8">
+      <div className="subcategory-container md:mx-32 mx-auto flex flex-row md:my-48 my-20">
+        <div className="flex flex-col md:items-start items-center md:w-1/2 w-full">
+          <h3 className="mi-presento-home md:text-6xl text-2xl font-bold">
             Mi presento
           </h3>
-          <p className="mi-presento-home md:text-2xl text-md leading-relaxed text-left">
+          <p className="mi-presento-home md:text-2xl text-md leading-relaxed md:text-left text-center py-10">
             Questa è la mia tana <br />
             E non ci porto soltanto quello che m'è stato vanto <br />
             Corse balzi salti voli grame notti e rari soli <br />
@@ -143,7 +143,7 @@ export default function Home() {
             Questa si è la mia tana
           </p>
         </div>
-        <div className="sergio-picture flex flex-col items-end md:w-1/2 w-full">
+        <div className="sergio-picture flex flex-col md:items-end md:w-1/2 w-full mx-auto">
           <img
             src="../files/sergio-profile.jpg"
             width={650}

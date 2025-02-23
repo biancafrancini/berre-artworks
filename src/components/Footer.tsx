@@ -11,7 +11,7 @@ export const Footer = () => {
           Dove trovarmi:{" "}
         </h4>
         <div className="flex flex-row justify-between items-center gap-6">
-          <Link href="mailto:Gt6wI@example.com" className="mail-icon text-5xl hover:scale-110">
+          <Link href="mailto:sergio@example.com" className="mail-icon text-5xl hover:scale-110">
             <ImMail2 />
           </Link>
           <Link

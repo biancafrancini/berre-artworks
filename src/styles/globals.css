@@ -140,4 +140,8 @@
   .main-container, .page-artworks{
     min-width: 100vh;
   }
+
+  .sergio-picture{
+    width: 350px;
+  }
 }
