@@ -19,16 +19,16 @@ const ArtworksData = [
         exhibitions: ["Collezione privata"],
         image: "cross_murales.jpeg",
     },
-    {
-        id: 3,
-        title: "Kids Copy",
-        year: "--",
-        dims: "--",
-        technique: "--",
-        description: "--",
-        exhibitions: ["--"],
-        image: "kids_copy.jpeg",
-    },
+    // {
+    //     id: 3,
+    //     title: "Kids Copy",
+    //     year: "--",
+    //     dims: "--",
+    //     technique: "--",
+    //     description: "--",
+    //     exhibitions: ["--"],
+    //     image: "kids_copy.jpeg",
+    // },
     {
         id: 4,
         title: "Pinocchio",
@@ -69,16 +69,16 @@ const ArtworksData = [
         exhibitions: ["Collezione privata"],
         image: "mustache_man.jpeg",
     },
-    {
-        id: 8,
-        title: "Woods and stones",
-        year: "---",
-        dims: "---",
-        technique: "---",
-        description: "---",
-        exhibitions: ["Collezione privata"],
-        image: "woods_and_stones.jpeg",
-    },
+    // {
+    //     id: 8,
+    //     title: "Woods and stones",
+    //     year: "---",
+    //     dims: "---",
+    //     technique: "---",
+    //     description: "---",
+    //     exhibitions: ["Collezione privata"],
+    //     image: "woods_and_stones.jpeg",
+    // },
     {
         id: 9,
         title: "Female toilet",
@@ -89,16 +89,16 @@ const ArtworksData = [
         exhibitions: ["Personale – Giugno 2021, Sala Set, Poggibonsi"],
         image: "female_toilet.jpeg",
     },
-    {
-        id: 10,
-        title: "Volleyball",
-        year: "",
-        dims: "",
-        technique: "Polimaterico",
-        description: "",
-        exhibitions: ["Collezione privata"],
-        image: "volleyball.jpeg",
-    },
+    // {
+    //     id: 10,
+    //     title: "Volleyball",
+    //     year: "",
+    //     dims: "",
+    //     technique: "Polimaterico",
+    //     description: "",
+    //     exhibitions: ["Collezione privata"],
+    //     image: "volleyball.jpeg",
+    // },
     {
         id: 11,
         title: "Viandante",
@@ -127,7 +127,7 @@ const ArtworksData = [
         technique: "Matita su carta",
         description: "Una morte incombe su tutta l’opera con tumultuosi e graffianti segni alle sue spalle . Solo una linea protegge la figura a capo chino, stremata mentre nel riquadro la figura d’uomo combatte le sue battaglie.",
         exhibitions: ["Collezione privata"],
-        image: "una_morte.jpeg", //* da aggiungere *//
+        image: "una_morte.jpeg",  //*da aggiungere *//
     },
     {
         id: 14,
@@ -139,14 +139,14 @@ const ArtworksData = [
         exhibitions: ["Personale – Giugno 2021, Sala Set, Poggibonsi"],
         image: "dromedario.jpeg", //* da aggiungere *//
     },
-    {
-        id: 15,
-        title: "Tana",
-        year: "",
-        dims: "",
-        technique: "",
-        description: "",
-        exhibitions: ["Collezione privata"],
-        image: "tana.jpeg", //* da aggiungere *//
-    }, 
+    // {
+    //     id: 15,
+    //     title: "Tana",
+    //     year: "",
+    //     dims: "",
+    //     technique: "",
+    //     description: "",
+    //     exhibitions: ["Collezione privata"],
+    //     image: "tana.jpeg", //* da aggiungere *//
+    // }, 
 ]

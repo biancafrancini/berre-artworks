@@ -92,26 +92,26 @@ const artworks = [
     exhibitions: ["Collezione privata"],
     image: "viandante.jpeg",
   },
-  {
-    id: 8,
-    title: "Moon Woods and Stones",
-    year: "---",
-    dims: "---",
-    technique: "---",
-    description: "---",
-    exhibitions: ["Collezione privata"],
-    image: "woods_and_stones_moon.jpeg",
-  },
-  {
-    id: 9,
-    title: "Volleyball",
-    year: "",
-    dims: "",
-    technique: "Polimaterico",
-    description: "",
-    exhibitions: ["Collezione privata"],
-    image: "volleyball.jpeg",
-  },
+  // {
+  //   id: 8,
+  //   title: "Moon Woods and Stones",
+  //   year: "---",
+  //   dims: "---",
+  //   technique: "---",
+  //   description: "---",
+  //   exhibitions: ["Collezione privata"],
+  //   image: "woods_and_stones_moon.jpeg",
+  // },
+  // {
+  //   id: 9,
+  //   title: "Volleyball",
+  //   year: "",
+  //   dims: "",
+  //   technique: "Polimaterico",
+  //   description: "",
+  //   exhibitions: ["Collezione privata"],
+  //   image: "volleyball.jpeg",
+  // },
   {
     id: 10,
     title: "Female toilet",
@@ -123,16 +123,16 @@ const artworks = [
     exhibitions: ["Personale – Giugno 2021, Sala Set, Poggibonsi"],
     image: "female_toilet.jpeg",
   },
-  {
-    id: 11,
-    title: "Kids",
-    year: "--",
-    dims: "--",
-    technique: "--",
-    description: "--",
-    exhibitions: ["--"],
-    image: "kids_copy.jpeg",
-  },
+  // {
+  //   id: 11,
+  //   title: "Kids",
+  //   year: "--",
+  //   dims: "--",
+  //   technique: "--",
+  //   description: "--",
+  //   exhibitions: ["--"],
+  //   image: "kids_copy.jpeg",
+  // },
   // {
   //     id: 12,
   //     title: "Superman",
@@ -178,7 +178,7 @@ const artworks = [
 export default function Artworks() {
   const contactsRef = useRef<HTMLDivElement | null>(null);
   return (
-    <div className="page-artworks">
+    <div className="page-artworks h-full">
       <div className="page-artworks-container flex flex-col items-center h-full w-full">
         <Navbar contacts={contactsRef} />
         <div className="md:mt-60 mt-52 md:mb-20 mb-4 md:mx-0 mx-20 flex flex-col">
@@ -190,7 +190,7 @@ export default function Artworks() {
           J. M. W. Turner
           </h2>
         </div>
-        <div className="artworks-container flex w-full m-10">
+        <div className="artworks-container flex w-full h-full mb-44 mt-10">
           <div className="cards">
             <Cards images={artworks} />
           </div>

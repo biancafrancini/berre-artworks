@@ -8,6 +8,11 @@
   --amber: rgb(224, 138, 46);
 }
 
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
 .navbar{
   background-color: var(--sergio);
   color: white;
@@ -127,6 +132,7 @@
 @media screen and (max-width: 768px) {
   .cards-container{
     max-width: 100%;
+    min-height: 100%;
     padding: 0 20px;
   }
 
@@ -137,8 +143,8 @@
     gap: 30px;
   }
 
-  .main-container, .page-artworks{
-    min-width: 100vh;
+  .main-container{
+    min-width: 100vw;
   }
 
   .sergio-picture{
